@@ -52,3 +52,20 @@ function sumOfValues(inputArray) {
 }
 
 sumOfValues([1, 2, 3]);
+
+// Challenge 3
+// - - - - - - - - - -
+
+function combinatedArray(firArray, secArray) {
+  let newArray = [];
+
+  firArray.forEach((val) => {
+    newArray.push(val);
+    secArray.forEach((val) => {
+      newArray.push(val);
+    });
+  });
+  console.log(newArray);
+}
+
+combinatedArray([1, 2, 3], [4, 5, 6]);
