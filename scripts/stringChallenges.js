@@ -95,4 +95,6 @@ const stringSlice = (str, char) => {
   return myReturn;
 };
 
+// Note: I was having trouble with this one. Going to ask for help in class.
+
 stringSlice("The practitioners grappled on the road side!", "g");
