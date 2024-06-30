@@ -61,8 +61,12 @@ function combinatedArray(firArray, secArray) {
 
   firArray.forEach((val) => {
     newArray.push(val);
-    secArray.forEach((val) => {
-      newArray.push(val);
+
+    secArray.forEach((val, idx) => {
+      if (val === secArray[0]) {
+        newArray.push(val);
+      }
+      return;
     });
   });
   console.log(newArray);
