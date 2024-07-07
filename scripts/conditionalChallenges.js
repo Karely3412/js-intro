@@ -1,26 +1,20 @@
-// const outterObject = {
-//   firstObject: { id: 1, name: "Karely" },
-//   secObject: { address: "123 fake st", Phone: "555-555-5555" },
-// };
+const outterObject = {
+  firstObject: { id: 1, name: "Karely" },
+  secObject: { address: "123 fake st", Phone: "555-555-5555" },
+};
 
-// console.log(outterObject.firstObject);
-// console.log(outterObject["secObject"]);
-// console.log(outterObject["firstObject"], outterObject.secObject);
+console.log(outterObject.firstObject);
+console.log(outterObject["secObject"]);
+console.log(outterObject["firstObject"], outterObject.secObject);
 
-// sentence = "I am a sentence";
+sentence = "I am a sentence";
 
-// const firstCapitalLet = (sentence) => {
-//   const splitStr = sentence.split(" ");
-//   console.log(splitStr);
+const firstCapitalLet = (sentence) => {
+  const splitStr = sentence.split(" ");
 
-//   splitStr.forEach((element) => {
-//     if (element.length > 0) {
-//       const emptyArray = [];
-//       emptyArray.push(element);
+  splitStr.forEach((val, idx) => {
+    console.log(val[0].toUpperCase() + val.slice(1));
+  });
+};
 
-//       console.log(emptyArray);
-//     }
-//   });
-// };
-
-// firstCapitalLet(sentence);
+firstCapitalLet(sentence);
