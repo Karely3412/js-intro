@@ -36,3 +36,12 @@ firstCapitalLet(sentence);
 
 // Challenge 4
 // - - - - - - - - - - - -
+
+const alphabeticalOrder = (sentence) => {
+  const splitStr = sentence.split("");
+  const sortedStr = splitStr.sort();
+  const joinedStr = sortedStr.join("");
+  return joinedStr;
+};
+
+console.log(alphabeticalOrder("hi there"));
