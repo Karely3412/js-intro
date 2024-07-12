@@ -18,16 +18,17 @@ console.log(byTwoCount([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 // removeByIndex[‘a', 'b', 'c', 'd', 'f', 'f', 'e', 'f'], [1, 5]) => ['b', 'f']]
 
-const removeByIndex = (myArray, idx) => {
+const removeByIndex = (myArray, [idx1, idx2]) => {
   const newArray = [];
   myArray.forEach((val, idx) => {
-    if (val == idx[0]) {
-      newArray.push(val);
-    } else if (val == idx[1]) {
-      newArray.push(val);
+    if (idx === idx1 || idx === idx2) {
+      console.log(newArray.push(val));
     }
   });
   return newArray;
 };
 
 console.log(removeByIndex(["a", "b", "c", "d", "f", "f", "e", "f"], [1, 5]));
+
+// Challenge 3
+// - - - - - - - - - - - - - - -
