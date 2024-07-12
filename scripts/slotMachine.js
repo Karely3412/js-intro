@@ -41,6 +41,24 @@ function spinner() {
   } else if (ranEmoji1 !== ranEmoji2 && ranEmoji1 !== ranEmoji3) {
     console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
     return 0;
+  } else if (ranEmoji2 === ranEmoji1 && ranEmoji2 === ranEmoji3) {
+    console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
+    return 100;
+  } else if (ranEmoji2 === ranEmoji1 && ranEmoji2 !== ranEmoji3) {
+    console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
+    return 50;
+  } else if (ranEmoji2 !== ranEmoji2 && ranEmoji2 !== ranEmoji3) {
+    console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
+    return 0;
+  } else if (ranEmoji3 === ranEmoji1 && ranEmoji3 === ranEmoji3) {
+    console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
+    return 100;
+  } else if (ranEmoji3 === ranEmoji1 && ranEmoji3 !== ranEmoji3) {
+    console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
+    return 50;
+  } else if (ranEmoji3 !== ranEmoji2 && ranEmoji3 !== ranEmoji3) {
+    console.log(`${ranEmoji1}${ranEmoji2}${ranEmoji3}`);
+    return 0;
   }
 }
 
