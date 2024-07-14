@@ -35,9 +35,13 @@ console.log(removeByIndex(["a", "b", "c", "d", "f", "f", "e", "f"], [1, 5]));
 // numToArray(12345) => [1, 2, 3, 4, 5]
 
 const numToArray = (num) => {
+  const returnArray = [];
   const numToStr = num.toString();
-  const test = Array.from(numToStr, Number);
-  return test;
+  for (let i = 0; i < numToStr.length; i++) {
+    returnArray.push(parseInt(numToStr));
+
+    return returnArray;
+  }
 };
 
 console.log(numToArray(12345));
