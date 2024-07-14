@@ -3,14 +3,24 @@
 
 function theLongestWord(myArray) {
   newArray = "";
-  myArray.forEach((element) => {
-    if (element.length > element) console.log(element);
-  });
+
+  // for (let i = 0; i < myArray.length; i++) {
+  //   const test = myArray[i];
+  //   for (let j = 0; j < test.length; j++) {
+  //     console.log(j);
+  //   }
+  // }
+  // myArray.forEach((val) => {
+  //   // console.log(val);
+  //   if (val.length < 3) {
+  //     console.log(val);
+  //   }
+  // });
 
   // myArray.join(" ");
   // console.log(myArray);
 
-  // return test;
+  return newArray;
 }
 
 theLongestWord(["any", "word", "i", "can", "think", "of"]);
@@ -72,3 +82,67 @@ const firstLetCap = (sentence) => {
 };
 
 console.log(firstLetCap("I am a sentence"));
+
+// // Challenge 6
+// // - - - - - - - - - -
+
+// // Challenge 7
+// - - - - - - - - - -
+// EX: "Hi there" => "eehhirt"
+
+// function orderedWord(word) {
+//   const splitWord = word.split("");
+//   const sortWord = splitWord.sort();
+//   sortWord.shift();
+//   const test = sortWord[0].toLowerCase();
+//   console.log(test);
+//   // console.log(sortWord[0]);
+//   sortWord.replace(sortWord[0], test);
+
+//   // const sortedWord = splitWord.sort();
+
+//   return sortWord;
+// }
+
+// console.log(orderedWord("Hi there"));
+
+// Challenge 8
+// - - - - - - - - - -
+
+function removeByIndex(myArray, [idx1, idx2]) {
+  const newArray = [];
+  myArray.forEach((val, idx) => {
+    if (idx === idx1 || idx === idx2) {
+      console.log(newArray.push(val));
+    }
+  });
+  return newArray;
+}
+console.log(removeByIndex(["a", "b", "c", "d"], [1, 3]));
+
+// Challenge 9
+// - - - - - - - - - -
+
+const myObject = {
+  userName: "",
+  activeStatus: "",
+};
+
+// function(myObject){
+
+// }
+
+myObject.userName = "Karely";
+myObject.activeStatus = "active";
+console.log(myObject.userName);
+console.log(myObject.activeStatus);
+console.log(`${myObject.userName} is ${myObject.activeStatus}!`);
+
+// Challenge 10
+// - - - - - - - - - -
+
+function powOf(num1, num2) {
+  return num1 ** num2;
+}
+
+console.log(powOf(4, 2));

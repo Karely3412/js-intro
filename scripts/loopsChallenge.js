@@ -45,3 +45,41 @@ const numToArray = (num) => {
 };
 
 console.log(numToArray(12345));
+
+// Challenge 4
+// - - - - - - - - - - - - - - -
+
+arrayOne = [1, 2, 3];
+arrayTwo = ["a", "b", "c", "d"];
+
+// [1, 'a'], ['a', 1], [1, 'b'],
+// ['b', 1], [1, 'c'], ['c', 1],
+// [1, 'd'], ['d', 1], [2, 'a'],
+// ['a', 2], [2, 'b'], ['b', 2],
+// [2, 'c'], ['c', 2], [2, 'd'],
+// ['d', 2], [3, 'a'], ['a', 3],
+// [3, 'b'], ['b', 3], [3, 'c'],
+// ['c', 3], [3, 'd'], ['d', 3]
+
+function rotatingOutput(arrayOne, arrayTwo) {
+  const returnArray = [];
+
+  arrayOne.forEach((val) => {
+    returnArray.push(val);
+    arrayTwo.forEach((val) => {
+      returnArray.push(val);
+    });
+  });
+
+  // returnArray.push(arrayOne[val], arrayTwo[val]);
+  // for (let i = 0; i < arrayOne.length; i++) {
+  //   for (let i = 0; i < arrayTwo.length; i++) {
+  //     returnArray.push(arrayOne[i]);
+  //     returnArray.push(arrayTwo[i]);
+  //     // returnArray.push(arrayTwo[i], arrayOne[i]);
+  //   }
+  // }
+  return returnArray;
+}
+
+console.log(rotatingOutput(arrayOne, arrayTwo));
