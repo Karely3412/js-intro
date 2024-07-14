@@ -61,25 +61,13 @@ arrayTwo = ["a", "b", "c", "d"];
 // [3, 'b'], ['b', 3], [3, 'c'],
 // ['c', 3], [3, 'd'], ['d', 3]
 
-function rotatingOutput(arrayOne, arrayTwo) {
-  const returnArray = [];
+const returnArray = [];
 
-  arrayOne.forEach((val) => {
-    returnArray.push(val);
-    arrayTwo.forEach((val) => {
-      returnArray.push(val);
-    });
-  });
-
-  // returnArray.push(arrayOne[val], arrayTwo[val]);
-  // for (let i = 0; i < arrayOne.length; i++) {
-  //   for (let i = 0; i < arrayTwo.length; i++) {
-  //     returnArray.push(arrayOne[i]);
-  //     returnArray.push(arrayTwo[i]);
-  //     // returnArray.push(arrayTwo[i], arrayOne[i]);
-  //   }
-  // }
-  return returnArray;
+for (let i = 0; i < arrayOne.length; i++) {
+  for (let j = 0; j < arrayTwo.length; j++) {
+    returnArray.push([arrayOne[i], arrayTwo[j]]);
+    returnArray.push([arrayTwo[j], arrayOne[i]]);
+  }
 }
 
-console.log(rotatingOutput(arrayOne, arrayTwo));
+console.log(returnArray);
