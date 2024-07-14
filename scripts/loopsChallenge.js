@@ -32,3 +32,12 @@ console.log(removeByIndex(["a", "b", "c", "d", "f", "f", "e", "f"], [1, 5]));
 
 // Challenge 3
 // - - - - - - - - - - - - - - -
+// numToArray(12345) => [1, 2, 3, 4, 5]
+
+const numToArray = (num) => {
+  const numToStr = num.toString();
+  const test = Array.from(numToStr, Number);
+  return test;
+};
+
+console.log(numToArray(12345));
