@@ -1,9 +1,12 @@
 const myInput = document.querySelector(".input");
 const myHeader = document.querySelector(".header");
+const myButton = document.getElementById("button");
 
 myInput.addEventListener("change", (e) => {
-  console.log("test3");
   myHeader.textContent = e.target.value;
-  console.log("test4");
+});
+
+myButton.addEventListener("click", (e) => {
+  myHeader.remove("myHeader");
 });
 console.log("I DID IT!! (:");
