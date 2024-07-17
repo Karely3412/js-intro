@@ -25,3 +25,38 @@ console.log(userTwo);
 
 // Challenge 2
 // - - - - - - - - - -
+// This was the closest I was able to get it
+function xmlHttpRequ(reqType, url) {
+  return new Promise((resolve, reject) => {
+    const objectRequested = new XMLHttpRequest();
+    objectRequested.open(reqType, url);
+    objectRequested.responseType = "json";
+    objectRequested.send();
+
+    objectRequested.onload = function () {
+      // console.log(objectRequested.response);
+      // console.log(objectRequested.status);
+      console.log("test1");
+
+      if (objectRequested.status === 200) {
+        console.log("test2");
+        resolve(objectRequested.response.message);
+        console.log("test3");
+      } else {
+        console.log("test4");
+        reject(objectRequested.response.message);
+      }
+      return objectRequested.response.message;
+    };
+  });
+}
+
+console.log(xmlHttpRequ("GET", "https://swapi.tech/api/people/"));
+
+xmlHttpRequ()
+  .then((result) => {
+    console.log("test11", result);
+  })
+  .catch((error) => {
+    console.log("test22", error);
+  });
